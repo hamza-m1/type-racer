@@ -1,4 +1,4 @@
-/* Main stylesheet */
+/* Google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Nunito:wght@400;700&display=swap");
 
 body {
@@ -10,7 +10,7 @@ body {
   color: #111;
 }
 
-/* Apply Google Fonts */
+/* Global styles */
 h1 {
   font-family: "Alegreya", serif;
 }
@@ -18,4 +18,55 @@ h1 {
 p {
   font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Header styles */
+.site-header {
+  background: #ff8400;
+  color: whitesmoke;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 0.75rem 0;
+}
+
+.site-header .container {
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.site-header .brand {
+  font-family: "Alegreya", serif;
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+#instructions-btn {
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* game area styles */
+
+#game-area {
+  border: 1px solid black;
+}
+
+/* Layout cards */
+#game-area .card,
+#scorecard .card {
+  min-height: 220px;
+}
+
+/* Make the scorecard visually distinct */
+#scorecard .card {
+  background: #fffef8;
+}
+
+/* media queries */
+@media (min-width: 576px) {
+  /* ensure left and right columns match height when side-by-side */
+  #game-area .card,
+  #scorecard .card {
+    height: 100%;
+  }
 }

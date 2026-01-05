@@ -13,8 +13,52 @@
 </head>
 
 <body>
-    <h1>hello</h1>
-    <p>hii hhiii hiiiis d</p>
+    <!-- header -->
+    <header class="site-header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1 class="brand mb-0">TypeRacer</h1>
+            <button id="instructions-btn" class="btn btn-light">Instructions</button>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main class="container my-5">
+        <div class="row g-4">
+            <!-- Game area (left) -->
+            <section id="game-area" class="col-12 col-md-8">
+                <div class="card-body">
+                    <h2 class="h5 mb-3">Game</h2>
+
+                    <div class="mb-3">
+                        <label class="form-label d-block mb-1">Select difficulty</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                id="difficultyDropdown" data-bs-toggle="dropdown" aria-expanded="false">Easy</button>
+                            <input type="hidden" id="difficulty" name="difficulty" value="easy">
+
+                            <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
+                                <li><button class="dropdown-item" type="button" data-value="easy">Easy</button></li>
+                                <li><button class="dropdown-item" type="button" data-value="medium">Medium</button></li>
+                                <li><button class="dropdown-item" type="button" data-value="hard">Hard</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- game UI will go here -->
+                </div>
+            </section>
+
+            <!-- Scorecard area (right) -->
+            <aside id="scorecard" class="col-12 col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="h6 mb-3">Scorecard</h2>
+                        <!-- scores and stats will go here -->
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
 
     <!-- bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
